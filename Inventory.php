@@ -9,6 +9,18 @@ class Inventory {
         $this->products = array();
     }
 
+    public function __get($prop){
+        echo "the property ['. $prop .'] is not found or cant be access";
+    }
+    public function __set($prop, $val){
+        echo "the property ['. $prop .'] is not found or cant be access";
+        echo "and you can't assign this value: ['. $val .']";
+    }
+
+    public function __call($method){
+        echo "the property ['. $method .'] is not found or cant be access";
+    }
+
     public function addProduct(Product $product) {
         $this->products[$product->getId()] = $product;
     }
