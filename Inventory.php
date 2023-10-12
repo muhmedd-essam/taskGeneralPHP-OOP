@@ -17,7 +17,7 @@ class Inventory {
         echo "and you can't assign this value: ['. $val .']";
     }
 
-    public function __call($method){
+    public function __call($method, $prop){
         echo "the property ['. $method .'] is not found or cant be access";
     }
 
